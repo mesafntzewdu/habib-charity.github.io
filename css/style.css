@@ -62,7 +62,9 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff; }
+  background-color: #fff; 
+  
+}
 
 [tabindex="-1"]:focus {
   outline: 0 !important; }
@@ -7592,7 +7594,7 @@ h1, h2, h3, h4, h5,
     left: -25px; }
   .owl-carousel:hover .owl-nav .owl-next {
     right: -25px; }
-
+   
 .owl-custom-nav {
   float: right;
   position: relative;
@@ -7733,7 +7735,11 @@ h1, h2, h3, h4, h5,
 
 .carousel-cause.owl-carousel .owl-stage-outer {
   padding-bottom: 2em;
-  position: relative; }
+  position: relative; 
+  overflow-x: hidden;
+}
+
+
 
 .cause-entry {
   background: #fff;
@@ -8025,6 +8031,21 @@ h1, h2, h3, h4, h5,
     .block-3 .text, .block-3 .image {
       width: 50%;
       padding: 10% 7%; } }
+ .image img {
+        max-width: 100%; /* Makes sure the image doesn't exceed its container's width */
+        height: auto; /* Allows the image's height to adjust proportionally to its width */
+        display: block; /* Ensures the image doesn't have any extra spacing or margin issues */
+        margin: auto; /* Centers the image within its container */ }
+        .btn-with-icon {
+          position: relative;
+      }
+      
+.btn-with-icon i {
+          position: absolute;
+          left: 10px; /* Adjust the position of the icon as needed */
+          top: 50%;
+          transform: translateY(-50%);
+}
 
 .block-3 .text .subheading {
   font-size: 13px;
@@ -9321,3 +9342,65 @@ textarea.form-control {
     opacity: 1;
     height: 100%;
   }
+
+  .donate-card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; /* Add rounded corners */
+    padding: 20px; /* Add padding */
+    margin: 20px; /* Add margin */
+}
+.donate-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+
+
+/* Default styles */
+.scroll-container {
+  overflow-x: auto;
+}
+
+.scroll-content {
+  display: flex;
+   /* Adjust margin for left alignment */
+  /* Adjust margin for right alignment */
+}
+
+.card-container {
+  display: flex; /* Use flexbox to arrange cards horizontally */
+}
+
+.carret_card {
+  flex: 0 0 auto;
+  width: 20%; /* Set a dynamic width for each card, considering margins */
+  margin: 10px; /* Adjust margin between cards */
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.current_card text {
+  width: 100%;
+  height: auto;
+}
+
+.charity_logo img{
+  width: 90px;
+  height: 90px;
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 768px) {
+
+  .charity_logo img {
+    width: 55px;
+    height: 55px;
+    margin-left: 10px;
+  }
+  .carret_card {
+    width: 25%; /* Adjust width for mobile screens */
+  }
+}
